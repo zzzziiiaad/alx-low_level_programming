@@ -1,13 +1,12 @@
-#include "main.h"
+#include <stdio.h>
 
 void puts2(char *str) {
     if (str == NULL)
         return;
 
-    int i = 0;
-    while (str[i] != '\0') {
+    int i; // Move the variable declaration to the beginning of the block
+    for (i = 0; str[i] != '\0'; i += 2) { /* Use C-style comments */
         printf("%c", str[i]);
-        i += 2; // Move to the next even index
     }
     printf("\n");
 }
